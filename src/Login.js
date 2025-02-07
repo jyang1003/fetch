@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import React, { useState } from 'react';
 
 function Login() {
@@ -7,7 +6,7 @@ function Login() {
 
     const handleLogin = () => {
         fetch('https://frontend-take-home-service.fetch.com/auth/login', {
-            method: 'GET',
+            method: 'POST',
             credentials: 'include',
             name: name, 
             email: email
@@ -15,7 +14,9 @@ function Login() {
     }
     return(
         <div>
-
+            <input type='text' placeholder='Name'></input>
+            <input type='text' placeholder='Email'></input>
+            <button>Login</button>
         </div>
     )
 }
