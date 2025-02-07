@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 function Home() {
     return(
-        <div></div>
+        <div>
+            <input type="text" placeholder="Search"></input>
+        </div>
     )
 }
 
