@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import './App.css';
 import Home from './Home';
 import Login from './Login';
@@ -6,8 +6,13 @@ import Login from './Login';
 function App() {
   return (
     <div className="App">
-        <Home></Home>
-        <Login></Login>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Login />}/>
+          <Route path='/home' element={<Home/>}/> 
+        </Routes>
+      </Router>
+
     </div>
   );
 }
